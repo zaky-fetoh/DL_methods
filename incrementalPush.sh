@@ -1,8 +1,8 @@
 #!/usr/bin/bash
 
-git status | grep .pdf | while read p; do
+git status **/* * | grep .pdf | while read p; do
 echo adding $p
-git add $p 
+git add "$p" 
 echo commiting $p
 git commit -m "$p"
 echo pushing $p
